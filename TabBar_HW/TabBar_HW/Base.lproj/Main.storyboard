@@ -131,7 +131,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="greenChildBackgroundColor:" destination="0HA-rN-6Gx" eventType="touchUpInside" id="qkx-9J-ibw"/>
+                                    <action selector="greenColorChild" destination="0HA-rN-6Gx" eventType="touchUpInside" id="Jd1-Fn-pvK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24A-zU-A1p">
@@ -143,7 +143,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="yellowChildBackgroundColor:" destination="0HA-rN-6Gx" eventType="touchUpInside" id="Xl4-Xg-OlX"/>
+                                    <action selector="yellowColorChild" destination="0HA-rN-6Gx" eventType="touchUpInside" id="L1E-bm-ApZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuc-K0-Yxg">
@@ -156,8 +156,8 @@
                                 </state>
                                 <connections>
                                     <action selector="parentBackgroundPurple:" destination="0HA-rN-6Gx" eventType="editingChanged" id="v0N-u6-cFk"/>
-                                    <action selector="purpleChildBackgroundColor:" destination="0HA-rN-6Gx" eventType="touchUpInside" id="dho-EQ-AIh"/>
                                     <action selector="purpleColorChanger:" destination="0HA-rN-6Gx" eventType="editingChanged" id="Thb-UG-t93"/>
+                                    <action selector="purpleColorChild" destination="0HA-rN-6Gx" eventType="touchUpInside" id="4Nz-ah-39h"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -187,7 +187,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="greenParentBackgroundColor:" destination="2Ou-sw-di7" eventType="touchUpInside" id="lA9-3g-ms5"/>
+                                    <action selector="greenColorParent" destination="2Ou-sw-di7" eventType="touchUpInside" id="Y3l-zB-l5e"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROn-od-Ziy">
@@ -199,7 +199,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="yellowParentBackgroundColor:" destination="2Ou-sw-di7" eventType="touchUpInside" id="cLT-IS-ntY"/>
+                                    <action selector="yellowColorParent" destination="2Ou-sw-di7" eventType="touchUpInside" id="WfN-cg-Cw5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dm-vZ-ziC">
@@ -211,7 +211,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="purpleParentBackgroundColor:" destination="2Ou-sw-di7" eventType="touchUpInside" id="ubZ-P1-3GM"/>
+                                    <action selector="purpleColorParent" destination="2Ou-sw-di7" eventType="touchUpInside" id="cAS-sK-fpr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -331,7 +331,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="greenColor:" destination="Ctl-GU-B4F" eventType="touchUpInside" id="xoG-b5-LV4"/>
+                                    <action selector="colorGreen" destination="Ctl-GU-B4F" eventType="touchUpInside" id="KJB-fs-PiA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l70-PY-Kpg">
@@ -343,7 +343,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="redColor:" destination="Ctl-GU-B4F" eventType="touchUpInside" id="epW-SU-jRj"/>
+                                    <action selector="colorRed" destination="Ctl-GU-B4F" eventType="touchUpInside" id="8yZ-iR-UEL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Выбран Зеленый" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0I8-fI-dsb">
@@ -362,7 +362,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="blueColor:" destination="Ctl-GU-B4F" eventType="touchUpInside" id="Cyu-ZT-eMg"/>
+                                    <action selector="colorBlue" destination="Ctl-GU-B4F" eventType="touchUpInside" id="dRs-2i-D8v"/>
                                 </connections>
                             </button>
                         </subviews>

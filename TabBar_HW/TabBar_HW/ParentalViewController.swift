@@ -15,17 +15,21 @@ class ParentalViewController: UIViewController {
     private var ContVC: childViewController?
     
     
-    @IBAction func greenChildBackgroundColor(_ sender: Any) {
-         ContVC?.colorView = .green
+    
+    
+    @IBAction func greenColorChild() {
+          ContVC?.colorView = .green
     }
     
-    @IBAction func yellowChildBackgroundColor(_ sender: Any){
-        ContVC?.colorView = .yellow
+    
+    @IBAction func yellowColorChild() {
+         ContVC?.colorView = .yellow
     }
     
-    @IBAction func purpleChildBackgroundColor(_ sender: Any) {
+    @IBAction func purpleColorChild() {
         ContVC?.colorView = .purple
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? childViewController, segue.identifier == "BackgroundChanger"{

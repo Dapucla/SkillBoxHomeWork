@@ -19,21 +19,23 @@ class childViewController: UIViewController {
     var colorView: UIColor?{
         didSet{ view.backgroundColor = colorView}
     }
-   
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-    }
     
       override func viewDidLoad() {
         super.viewDidLoad()
      }
-    @IBAction func greenParentBackgroundColor(_ sender: Any) {
-        delegate?.setColor(.green)
+    
+
+    
+    @IBAction func greenColorParent() {
+         delegate?.setColor(.green)
     }
-    @IBAction func yellowParentBackgroundColor(_ sender: Any) {
-          delegate?.setColor(.yellow)
+    
+    @IBAction func yellowColorParent() {
+         delegate?.setColor(.yellow)
     }
-    @IBAction func purpleParentBackgroundColor(_ sender: Any) {
+    
+    
+    @IBAction func purpleColorParent() {
         delegate?.setColor(.purple)
     }
     

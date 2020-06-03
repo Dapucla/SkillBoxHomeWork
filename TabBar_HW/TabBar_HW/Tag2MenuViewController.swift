@@ -25,27 +25,28 @@ class Tag2MenuViewController: UIViewController {
     var delegate: Tag2MenuViewControllerDelegate?
     @IBOutlet weak var chosenColorLabel: UILabel!
     
-    @IBAction func greenColor(_ sender: Any) {
-        chosenColorLabel.text! = "Выбран Зеленый"
-        colorButton = "Выбран Зеленый"
-        delegate?.setLabel(colorButton)
-        dismiss(animated: true)
-     
+    
+    
+    @IBAction func colorGreen() {
+        chosenColorLabel.text = "Выбран Зеленый"
+             colorButton = "Выбран Зеленый"
+             delegate?.setLabel(colorButton)
+             dismiss(animated: true)
     }
     
-    @IBAction func blueColor(_ sender: Any) {
-        chosenColorLabel.text! = "Выбран Синий"
-        colorButton = "Выбран Синий"
-        delegate?.setLabel(colorButton)
-        dismiss(animated: true)
+    @IBAction func colorBlue() {
+        chosenColorLabel.text = "Выбран Синий"
+              colorButton = "Выбран Синий"
+              delegate?.setLabel(colorButton)
+              dismiss(animated: true)
     }
     
-    @IBAction func redColor(_ sender: Any) {
-        chosenColorLabel.text! = "Выбран Красный"
-        colorButton = "Выбран Красный"
-        delegate?.setLabel(colorButton)
-        dismiss(animated: true)
+    @IBAction func colorRed() {
+        chosenColorLabel.text = "Выбран Красный"
+               colorButton = "Выбран Красный"
+               delegate?.setLabel(colorButton)
+               dismiss(animated: true)
     }
-
+    
     
 }

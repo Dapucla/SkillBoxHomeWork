@@ -16,9 +16,11 @@ class Tag2MainViewController: UIViewController {
     
     @IBOutlet weak var mainLabelText: UILabel!
     
+   
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? Tag2MenuViewController, segue.identifier == "ShowMenu"{
-            vc.colorText = mainLabelText.text!
+            vc.colorText = mainLabelText.text ?? "mistake"
             vc.delegate = self
         }
     }
@@ -26,6 +28,6 @@ class Tag2MainViewController: UIViewController {
 
 extension Tag2MainViewController: Tag2MenuViewControllerDelegate{
     func setLabel(_ labelText: String) {
-        mainLabelText.text! = labelText
+        mainLabelText.text = labelText
     }
 }
