@@ -15,7 +15,6 @@
 		98A53A7325251766003E92D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A53A7125251766003E92D4 /* LaunchScreen.storyboard */; };
 		98A53A7E25251766003E92D4 /* cicleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A53A7D25251766003E92D4 /* cicleTests.swift */; };
 		98A53A8925251766003E92D4 /* cicleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A53A8825251766003E92D4 /* cicleUITests.swift */; };
-		98BC7CAA252D146200688F08 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 98BC7CA9252D146200688F08 /* logo2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		98A53A8425251766003E92D4 /* cicleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cicleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A53A8825251766003E92D4 /* cicleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cicleUITests.swift; sourceTree = "<group>"; };
 		98A53A8A25251766003E92D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		98BC7CA9252D146200688F08 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = ../../../../../../Desktop/logo2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +103,6 @@
 				98A53A6825251766003E92D4 /* SceneDelegate.swift */,
 				98A53A6A25251766003E92D4 /* ViewController.swift */,
 				98A53A6C25251766003E92D4 /* Main.storyboard */,
-				98BC7CA9252D146200688F08 /* logo2.png */,
 				98A53A6F25251766003E92D4 /* Assets.xcassets */,
 				98A53A7125251766003E92D4 /* LaunchScreen.storyboard */,
 				98A53A7425251766003E92D4 /* Info.plist */,
@@ -237,7 +234,6 @@
 				98A53A7325251766003E92D4 /* LaunchScreen.storyboard in Resources */,
 				98A53A7025251766003E92D4 /* Assets.xcassets in Resources */,
 				98A53A6E25251766003E92D4 /* Main.storyboard in Resources */,
-				98BC7CAA252D146200688F08 /* logo2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

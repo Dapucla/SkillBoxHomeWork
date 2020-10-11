@@ -10,88 +10,52 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-    
-    
     @IBOutlet weak var imageView: UIImageView!
     
-    
     @IBOutlet weak var label: UILabel!
-    
     
     @IBOutlet var backOutlet: UIButton!
     
     @IBOutlet var nextOutlet: UIButton!
     
-    var imageInt = 0
+    var imageInt = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageInt = 1
         label.text = String("\(imageInt)/10")
-        
+        imageInt = 1
         backOutlet.isEnabled = false
-    
+        nextOutlet.isEnabled = true
     }
-    
-    
     
     @IBAction func backButton(_ sender: Any) {
         imageInt -= 1
+        imageView.image = UIImage(named: "image\(imageInt).jpeg")
         label.text = String("\(imageInt)/10")
-        
-        self.imageGallery()
+        moveCheck()
     }
     
     @IBAction func nextButton(_ sender: Any) {
         imageInt += 1
+        imageView.image = UIImage(named: "image\(imageInt).jpeg")
         label.text = String("\(imageInt)/10")
-        
-        self.imageGallery()
+        moveCheck()
     }
     
-    func imageGallery(){
-        
-        
-        
-        if imageInt == 1 {
-            backOutlet.isEnabled = false
-            imageView.image = UIImage(named: "image\(imageInt).jpeg")
-        }
-        if imageInt == 2 {
+    func moveCheck() {
+        switch imageInt {
+        case 1:
+        backOutlet.isEnabled = false
+        nextOutlet.isEnabled = true
+        case 2...9:
+        backOutlet.isEnabled = true
+        nextOutlet.isEnabled = true
+        case 10:
             backOutlet.isEnabled = true
-            imageView.image = UIImage(named: "image\(imageInt).jpeg")
-        }
-       if imageInt == 3 {
-           imageView.image = UIImage(named: "image\(imageInt).jpeg")
-       }
-       if imageInt == 4 {
-           imageView.image = UIImage(named: "image\(imageInt).jpeg")
-       }
-       if imageInt == 5 {
-           imageView.image = UIImage(named: "image\(imageInt).jpeg")
-       }
-       if imageInt == 6 {
-           imageView.image = UIImage(named: "image\(imageInt).jpeg")
-       }
-       if imageInt == 7 {
-           imageView.image = UIImage(named: "image\(imageInt).jpeg")
-       }
-       if imageInt == 8 {
-           imageView.image = UIImage(named: "image\(imageInt).jpeg")
-       }
-        if imageInt == 9 {
-            
-            nextOutlet.isEnabled = true
-            imageView.image = UIImage(named: "image\(imageInt).jpeg")
-        }
-        if imageInt == 10 {
-            
             nextOutlet.isEnabled = false
-           imageView.image = UIImage(named: "image\(imageInt).jpeg")
-            
+        default:
+            print("не удалось распознать число")
         }
     }
-    
 }
 

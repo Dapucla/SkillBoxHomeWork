@@ -12,16 +12,17 @@ class ViewController: UIViewController {
     struct Image {
         let raw: UIImage?
         let title: String
+        let number: Int
     }
     
 
-    let images = [Image(raw: UIImage(named: "pic1"), title: "label1"),Image(raw: UIImage(named: "pic2"), title: "label2"),Image(raw: UIImage(named: "pic3"), title: "label3"), Image(raw: UIImage(named: "pic4"), title: "label4")]
+    let images = [Image(raw: UIImage(named: "pic1"), title: "label1", number: 1),Image(raw: UIImage(named: "pic2"), title: "label2", number: 2), Image(raw: UIImage(named: "pic3"), title: "label3", number: 3), Image(raw: UIImage(named: "pic4"), title: "label4", number: 4)  ]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       ffor image in images {
+    
+        for image in images {
         let img = CGRect(x: 30, y: 100, width: 150, height: 250)
         let imageView = UIImageView(frame: img) // frame всегда будет одинаковый
         imageView.image = image.raw
