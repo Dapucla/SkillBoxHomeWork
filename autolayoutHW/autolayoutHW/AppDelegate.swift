@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  autolayoutHW
 //
-//  Created by Даниил Алексеев on 05.10.2020.
+//  Created by Даниил Алексеев on 12.10.2020.
 //
 
 import UIKit
