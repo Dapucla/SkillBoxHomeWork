@@ -43,18 +43,8 @@ class ViewController: UIViewController {
     }
     
     func moveCheck() {
-        switch imageInt {
-        case 1:
-        backOutlet.isEnabled = false
-        nextOutlet.isEnabled = true
-        case 2...9:
-        backOutlet.isEnabled = true
-        nextOutlet.isEnabled = true
-        case 10:
-            backOutlet.isEnabled = true
-            nextOutlet.isEnabled = false
-        default:
-            print("не удалось распознать число")
+         backOutlet.isEnabled = imageInt > 1
+        nextOutlet.isEnabled = imageInt < 10
         }
     }
 }
