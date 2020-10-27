@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9811ADD22540485D00076F52 /* BurgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9811ADD12540485D00076F52 /* BurgerViewController.swift */; };
 		9811ADD725404B5700076F52 /* BurgerlCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9811ADD625404B5700076F52 /* BurgerlCollectionViewCell.swift */; };
+		981B82C425431C75001E822C /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981B82C325431C75001E822C /* SliderCell.swift */; };
 		98660D832535CCC10039A6E6 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98660D822535CCC10039A6E6 /* CollectionReusableView.swift */; };
 		988F3FA0253317D200FB8341 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988F3F9F253317D200FB8341 /* AppDelegate.swift */; };
 		988F3FA2253317D200FB8341 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988F3FA1253317D200FB8341 /* SceneDelegate.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		9811ADD12540485D00076F52 /* BurgerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerViewController.swift; sourceTree = "<group>"; };
 		9811ADD625404B5700076F52 /* BurgerlCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerlCollectionViewCell.swift; sourceTree = "<group>"; };
+		981B82C325431C75001E822C /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
 		98660D822535CCC10039A6E6 /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		988F3F9C253317D200FB8341 /* collections&tablesHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "collections&tablesHW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		988F3F9F253317D200FB8341 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				98660D822535CCC10039A6E6 /* CollectionReusableView.swift */,
 				988F3FD2253319A800FB8341 /* CollectionViewCell.swift */,
 				988F3FA5253317D200FB8341 /* Main.storyboard */,
+				981B82C325431C75001E822C /* SliderCell.swift */,
 				9811ADD12540485D00076F52 /* BurgerViewController.swift */,
 				9811ADD625404B5700076F52 /* BurgerlCollectionViewCell.swift */,
 				988F3FA8253317D300FB8341 /* Assets.xcassets */,
@@ -276,6 +279,7 @@
 				988F3FD3253319A800FB8341 /* CollectionViewCell.swift in Sources */,
 				98660D832535CCC10039A6E6 /* CollectionReusableView.swift in Sources */,
 				988F3FA2253317D200FB8341 /* SceneDelegate.swift in Sources */,
+				981B82C425431C75001E822C /* SliderCell.swift in Sources */,
 				9811ADD22540485D00076F52 /* BurgerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

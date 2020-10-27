@@ -10,4 +10,11 @@ import UIKit
 class BurgerlCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageview: UIImageView!
+    
+    
+    var image: UIImage! {
+        didSet {
+            imageview.image = image
+        }
+    }
 }
