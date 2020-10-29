@@ -11,54 +11,94 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SegmentedView" customModule="personalUIcomponents" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="g05-Nu-O7r">
-                    <rect key="frame" x="118" y="287.5" width="139" height="92.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбран первый" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRV-lU-5lT">
+                    <rect key="frame" x="124" y="149" width="126" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0m-DZ-86X">
+                    <rect key="frame" x="113" y="72" width="149" height="46"/>
                     <subviews>
-                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pgX-JA-Y7b">
-                            <rect key="frame" x="0.0" y="0.0" width="139" height="32"/>
-                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <segments>
-                                <segment title="Первый"/>
-                                <segment title="Второй"/>
-                            </segments>
-                            <color key="selectedSegmentTintColor" systemColor="systemTealColor"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbm-kd-iXM">
+                            <rect key="frame" x="8" y="6" width="60" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="13"/>
+                            <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                            <state key="normal" title="Первый"/>
                             <connections>
-                                <action selector="indexChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="whq-DO-j3N"/>
+                                <action selector="firstButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="pIl-8d-uUg"/>
                             </connections>
-                        </segmentedControl>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбран первый" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRV-lU-5lT">
-                            <rect key="frame" x="0.0" y="72" width="139" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DML-hP-KnQ">
+                            <rect key="frame" x="81" y="6" width="60" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Второй"/>
+                            <connections>
+                                <action selector="secondButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="5zw-yC-YlR"/>
+                            </connections>
+                        </button>
                     </subviews>
-                </stackView>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="r4e-sH-ln6"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" red="0.87983247422680411" green="0.73155605670103097" blue="0.32043331185567009" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="g05-Nu-O7r" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="oiB-IF-0oe"/>
-                <constraint firstItem="g05-Nu-O7r" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tOz-O2-1w7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="q0m-DZ-86X" secondAttribute="trailing" constant="113" id="9H7-i6-eFC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qRV-lU-5lT" secondAttribute="trailing" constant="125" id="E3D-bQ-jRL"/>
+                <constraint firstItem="qRV-lU-5lT" firstAttribute="top" secondItem="q0m-DZ-86X" secondAttribute="bottom" constant="31" id="Eof-nf-jXL"/>
+                <constraint firstItem="q0m-DZ-86X" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="113" id="U7p-AK-918"/>
+                <constraint firstItem="q0m-DZ-86X" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="72" id="dIi-SR-CP0"/>
+                <constraint firstItem="qRV-lU-5lT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="124" id="eIr-xf-PVN"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="color" keyPath="segmentedControlColor">
                     <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="string" keyPath="firstButtonText" value="рпрп"/>
+                <userDefinedRuntimeAttribute type="color" keyPath="segmentBackgroundColor">
+                    <color key="value" red="1" green="0.188694695" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="firstButtonBackgroundColor">
+                    <color key="value" red="0.30569426550000001" green="0.84624677839999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="secondButtonBackgroundColor">
+                    <color key="value" systemColor="systemRedColor"/>
+                </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="firstButton" destination="Lbm-kd-iXM" id="KZ7-SD-VnM"/>
                 <outlet property="label" destination="qRV-lU-5lT" id="cFh-oM-yQZ"/>
-                <outlet property="segmentedControl" destination="pgX-JA-Y7b" id="2zq-83-bH8"/>
+                <outlet property="secondButton" destination="DML-hP-KnQ" id="ij9-oW-b4T"/>
+                <outlet property="segmentBackground" destination="q0m-DZ-86X" id="ekv-fh-c3P"/>
             </connections>
-            <point key="canvasLocation" x="148" y="-236"/>
+            <point key="canvasLocation" x="44" y="-454.27286356821594"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
