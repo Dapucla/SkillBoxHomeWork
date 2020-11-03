@@ -14,20 +14,19 @@ class SegmentedViewController: UIViewController {
         let segmentedView = SegmentedView.loadFromNIB()
         view.addSubview(segmentedView)
         segmentedView.delegate = self
-
-        
     }
     
-
- 
-
 }
-
 
 extension SegmentedViewController: SegmentedViewDelegate{
     func segmentedViewIndex(_ segmentedView: SegmentedView, labelText: String) {
         segmentedView.label.text = labelText
     }
+    
+    
+    
+    
+    
     
     
 }

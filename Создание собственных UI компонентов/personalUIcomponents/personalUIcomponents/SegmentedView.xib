@@ -20,69 +20,67 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0m-DZ-86X">
-                    <rect key="frame" x="113" y="72" width="149" height="46"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sPv-73-7Oz">
+                    <rect key="frame" x="67" y="60" width="240" height="71"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbm-kd-iXM">
-                            <rect key="frame" x="8" y="6" width="60" height="35"/>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q0m-DZ-86X">
+                            <rect key="frame" x="32" y="8" width="80" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbm-kd-iXM">
+                            <rect key="frame" x="37" y="14" width="71" height="38"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="1" green="0.188694695" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" weight="black" pointSize="13"/>
                             <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                             <state key="normal" title="Первый"/>
                             <connections>
-                                <action selector="firstButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="pIl-8d-uUg"/>
+                                <action selector="action1" destination="iN0-l3-epB" eventType="touchUpInside" id="kfA-2d-cUS"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DML-hP-KnQ">
-                            <rect key="frame" x="81" y="6" width="60" height="35"/>
+                            <rect key="frame" x="131" y="14" width="71" height="38"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <color key="backgroundColor" systemColor="systemRedColor"/>
                             <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Второй"/>
                             <connections>
-                                <action selector="secondButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="5zw-yC-YlR"/>
+                                <action selector="action2" destination="iN0-l3-epB" eventType="touchUpInside" id="u8M-r4-BWJ"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="46" id="r4e-sH-ln6"/>
-                    </constraints>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="q0m-DZ-86X" secondAttribute="trailing" constant="113" id="9H7-i6-eFC"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qRV-lU-5lT" secondAttribute="trailing" constant="125" id="E3D-bQ-jRL"/>
-                <constraint firstItem="qRV-lU-5lT" firstAttribute="top" secondItem="q0m-DZ-86X" secondAttribute="bottom" constant="31" id="Eof-nf-jXL"/>
-                <constraint firstItem="q0m-DZ-86X" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="113" id="U7p-AK-918"/>
-                <constraint firstItem="q0m-DZ-86X" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="72" id="dIi-SR-CP0"/>
                 <constraint firstItem="qRV-lU-5lT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="124" id="eIr-xf-PVN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="qRV-lU-5lT" secondAttribute="bottom" constant="30.5" id="hO0-cy-j7S"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="color" keyPath="segmentedControlColor">
-                    <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </userDefinedRuntimeAttribute>
-                <userDefinedRuntimeAttribute type="string" keyPath="firstButtonText" value="рпрп"/>
-                <userDefinedRuntimeAttribute type="color" keyPath="segmentBackgroundColor">
-                    <color key="value" red="1" green="0.188694695" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                </userDefinedRuntimeAttribute>
                 <userDefinedRuntimeAttribute type="color" keyPath="firstButtonBackgroundColor">
                     <color key="value" red="0.30569426550000001" green="0.84624677839999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </userDefinedRuntimeAttribute>
                 <userDefinedRuntimeAttribute type="color" keyPath="secondButtonBackgroundColor">
                     <color key="value" systemColor="systemRedColor"/>
                 </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="segmentedViewBackgroundColor">
+                    <color key="value" red="0.30569426550000001" green="0.4765490765" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="animator" destination="sPv-73-7Oz" id="JZe-qd-vt4"/>
                 <outlet property="firstButton" destination="Lbm-kd-iXM" id="KZ7-SD-VnM"/>
                 <outlet property="label" destination="qRV-lU-5lT" id="cFh-oM-yQZ"/>
                 <outlet property="secondButton" destination="DML-hP-KnQ" id="ij9-oW-b4T"/>
                 <outlet property="segmentBackground" destination="q0m-DZ-86X" id="ekv-fh-c3P"/>
+                <outlet property="segmentView" destination="sPv-73-7Oz" id="9Kr-9q-FLY"/>
             </connections>
             <point key="canvasLocation" x="44" y="-454.27286356821594"/>
         </view>
@@ -91,11 +89,11 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
