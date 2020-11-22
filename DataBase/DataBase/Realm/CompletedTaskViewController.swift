@@ -1,0 +1,41 @@
+//
+//  CompletedTaskViewController.swift
+//  DataBase
+//
+//  Created by Даниил Алексеев on 11.11.2020.
+//
+import RealmSwift
+import UIKit
+
+class CompletedTaskViewController: UIViewController {
+
+    public var item: ToDoListItem?
+    public var deletionHandler: (() -> Void)?
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    private let realm = try! Realm()
+
+    static let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        return dateFormatter
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        dateLabel.text = Self.dateFormatter.string(from: item!.date)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(didTapDelete))
+    }
+    
+    @objc private func didTapDelete() {
+        guard let myItem = self.item else {
+            return
+        }
+        realm.beginWrite()
+        realm.delete(myItem)
+        try! realm.commitWrite()
+        deletionHandler?()
+        navigationController?.popToRootViewController(animated: true)
+    }
+}
