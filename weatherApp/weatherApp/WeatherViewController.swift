@@ -30,6 +30,7 @@ class WeatherViewController: UIViewController {
         label.center = CGPoint(x: 0, y: 100)
         label.textAlignment = .center
         label.center.x = self.view.center.x
+        label.text = sender.cityNamelabel
         
         
         self.URLSessionWeather.view.addSubview(label)
