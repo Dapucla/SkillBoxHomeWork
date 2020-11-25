@@ -70,16 +70,16 @@ class AlamofireViewController: UIViewController {
 }
 
 //MARK: Работаем с таблицей
-extension AlamofireViewController: UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return forcastWeatherDataArray.count
-    }
+// extension AlamofireViewController: UITableViewDataSource{
+//     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//         return forcastWeatherDataArray.count
+//     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AlamofireCell") as! AlmofireCellTableViewCell
-        cell.dataLabel.text = forcastWeatherDataArray[indexPath.row].dt_txt
-        cell.tableTempLabel.text = "\(forcastWeatherDataArray[indexPath.row].main.temp.rounded())"
-        cell.iconImage.image = UIImage(named: "\(forcastWeatherDataArray[indexPath.row].weather[0].icon)")
-        return cell
-    }
-}
+//     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//         let cell = tableView.dequeueReusableCell(withIdentifier: "AlamofireCell") as! AlmofireCellTableViewCell
+//         cell.dataLabel.text = forcastWeatherDataArray[indexPath.row].dt_txt
+//         cell.tableTempLabel.text = "\(forcastWeatherDataArray[indexPath.row].main.temp.rounded())"
+//         cell.iconImage.image = UIImage(named: "\(forcastWeatherDataArray[indexPath.row].weather[0].icon)")
+//         return cell
+//     }
+// }
