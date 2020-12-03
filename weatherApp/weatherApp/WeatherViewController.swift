@@ -15,6 +15,7 @@ class WeatherViewController: UIViewController {
     let gradientLayer = CAGradientLayer()
     let tableView = UITableView()
     var weatherService: WeatherService?
+    var forcastWeatherDataArray = [List]()
     
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
@@ -24,6 +25,7 @@ class WeatherViewController: UIViewController {
         currentWeatherDescriptionLabel()
         currentWeatherImageView()
         configureTableView()
+        
         
         tableView.backgroundColor = UIColor.clear
     }
@@ -62,16 +64,9 @@ class WeatherViewController: UIViewController {
         cityNameLabel.center.x = self.view.center.x
         cityNameLabel.font = UIFont(name:"DIN Condensed", size: 60.0)
         
-        cityNameLabel.text = "Москва"
-       
-        
-        
-//        weatherService?.currentWeather { currentWeather in
-//            cityNameLabel.text = currentWeather.name
-//        }
-        
-
-        
+        weatherService?.currentWeather { currentWeather in
+            cityNameLabel.text = currentWeather.name
+        }
         view.addSubview(cityNameLabel)
     }
         // MARK: - Создаем label, для состояние текущей погоды
@@ -81,7 +76,9 @@ class WeatherViewController: UIViewController {
         currentWeatherDescriptionLabel.textAlignment = .center
         currentWeatherDescriptionLabel.center.x = self.view.center.x
         currentWeatherDescriptionLabel.font = UIFont(name:"DIN Condensed", size: 20.0)
-        currentWeatherDescriptionLabel.text = "Ясно"
+        weatherService?.currentWeather { currentWeather in
+            currentWeatherDescriptionLabel.text = currentWeather.weather[0].description
+        }
         view.addSubview(currentWeatherDescriptionLabel)
     }
         // MARK: - Создаем UIImageView, для иконки текущей погоды
@@ -89,7 +86,9 @@ class WeatherViewController: UIViewController {
         let currentWeatherImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 170, height: 170))
         currentWeatherImageView.center = CGPoint(x: 160, y: 180)
         currentWeatherImageView.center.x = self.view.center.x
-        currentWeatherImageView.image = UIImage(named: "01d")
+        weatherService?.currentWeather { currentWeather in
+            currentWeatherImageView.image = UIImage(named: "\(currentWeather.weather[0].icon)")
+        }
         view.addSubview(currentWeatherImageView)
     }
         // MARK: - Создаем label, для текущей температуры
@@ -99,7 +98,9 @@ class WeatherViewController: UIViewController {
         currentWeatherTemperatureLabel.textAlignment = .center
         currentWeatherTemperatureLabel.center.x = self.view.center.x
         currentWeatherTemperatureLabel.font = UIFont(name:"DIN Condensed", size: 80.0)
-        currentWeatherTemperatureLabel.text = "22 °C"
+        weatherService?.currentWeather { currentWeather in
+            currentWeatherTemperatureLabel.text = "\(currentWeather.main.temp.rounded())°C"
+        }
         view.addSubview(currentWeatherTemperatureLabel)
         return currentWeatherTemperatureLabel
     }
@@ -117,6 +118,7 @@ class WeatherViewController: UIViewController {
     }
     
     func setTableViewDelegates(){
+        tableView.reloadData() 
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -124,13 +126,18 @@ class WeatherViewController: UIViewController {
 
 extension WeatherViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return forcastWeatherDataArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! ForecastTableViewCell
+        
+        weatherService?.forecastWeather { forecastWeather in
+            cell.dateLabel.text = forecastWeather.list[0].dt_txt
+            cell.forecastTemperatureLabel.text = ("\(forecastWeather.list[0].main.temp)")
+            cell.weatherIcon.image = UIImage(named: "\(forecastWeather.list[0].weather[0].icon)")
+        }
         return cell
     }
-    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell,
                    forRowAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor.clear
