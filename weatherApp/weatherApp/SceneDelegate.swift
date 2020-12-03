@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         func createURLSessionVC() -> UIViewController{
             let sessionVC = WeatherViewController()
+            sessionVC.weatherService = URLSessionWeatherService()
             
           
             
@@ -30,6 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         func createAlamofireVC() -> UIViewController {
             let alamofireVC = WeatherViewController()
+             alamofireVC.weatherService = AlamofireWeatherService()
             alamofireVC.title = "Alamofire"
             alamofireVC.tabBarItem = UITabBarItem(title: "Alamofire", image: nil, tag: 1)
             return alamofireVC
