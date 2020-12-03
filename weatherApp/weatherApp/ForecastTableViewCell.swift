@@ -45,11 +45,12 @@ class ForecastTableViewCell: UITableViewCell {
     }
     
     func setImageConstraints(){
-        weatherIcon.translatesAutoresizingMaskIntoConstraints = false
-        weatherIcon.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        weatherIcon.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
-        weatherIcon.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        weatherIcon.widthAnchor.constraint(equalTo: weatherIcon.heightAnchor, multiplier: 1/1).isActive = true
+        NSLayoutConstraint.activate([
+            weatherIcon.centerYAnchor.constraint(equalTo: centerYAnchor),
+            weatherIcon.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
+            weatherIcon.heightAnchor.constraint(equalToConstant: 40),
+            weatherIcon.widthAnchor.constraint(equalTo: weatherIcon.heightAnchor)
+        ])
     }
     
     func setDateLabeConstraintsl(){
@@ -59,7 +60,5 @@ class ForecastTableViewCell: UITableViewCell {
         dateLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         dateLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
     }
-    
-    
     
 }
