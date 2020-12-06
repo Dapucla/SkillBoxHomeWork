@@ -24,6 +24,7 @@ class ForecastTableViewCell: UITableViewCell {
         configureForecastTemperatureLabel()
         setImageConstraints()
         setDateLabeConstraintsl()
+        setForecastTemperatureLabel()
     }
     
     required init?(coder: NSCoder) {
@@ -39,26 +40,33 @@ class ForecastTableViewCell: UITableViewCell {
         dateLabel.numberOfLines = 0
         dateLabel.adjustsFontSizeToFitWidth = true
     }
+    
     func configureForecastTemperatureLabel(){
         forecastTemperatureLabel.numberOfLines = 0
         forecastTemperatureLabel.adjustsFontSizeToFitWidth = true
     }
     
     func setImageConstraints(){
-        NSLayoutConstraint.activate([
-            weatherIcon.centerYAnchor.constraint(equalTo: centerYAnchor),
-            weatherIcon.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
-            weatherIcon.heightAnchor.constraint(equalToConstant: 40),
-            weatherIcon.widthAnchor.constraint(equalTo: weatherIcon.heightAnchor)
-        ])
+        weatherIcon.translatesAutoresizingMaskIntoConstraints = false
+        weatherIcon.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        weatherIcon.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
+        weatherIcon.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        weatherIcon.widthAnchor.constraint(equalTo: weatherIcon.heightAnchor).isActive = true
     }
     
     func setDateLabeConstraintsl(){
         dateLabel.translatesAutoresizingMaskIntoConstraints = false
         dateLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        dateLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
+        dateLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
         dateLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         dateLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
     }
     
+    func setForecastTemperatureLabel() {
+        forecastTemperatureLabel.translatesAutoresizingMaskIntoConstraints = false
+        forecastTemperatureLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        forecastTemperatureLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 220).isActive = true
+        forecastTemperatureLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        forecastTemperatureLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
+    }
 }
