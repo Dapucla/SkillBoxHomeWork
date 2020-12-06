@@ -89,7 +89,7 @@ class AlamofireWeatherService: WeatherService{
             guard let forecastWeather = response.value else { return }
             self.forcastWeatherDataArray = forecastWeather.list
             DispatchQueue.main.async {
-//                self.tableView.reloadData()
+                 completion(forecastWeather)
             }
         }
     }
