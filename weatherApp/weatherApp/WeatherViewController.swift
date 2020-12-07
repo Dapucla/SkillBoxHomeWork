@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  weatherApp
-//
-//  Created by Даниил Алексеев on 07.11.2020.
-//
-
 import UIKit
 import Alamofire
 
@@ -22,6 +15,10 @@ class WeatherViewController: UIViewController {
         currentWeatherDescriptionLabel()
         currentWeatherImageView()
         configureTableView()
+        
+        weatherService?.forecastWeather{ forecastWeather in
+            self.forcastWeatherDataArray = forecastWeather.list
+        }
     }
     // MARK: - Вызываем ViewWillAppear для создания градиента
     override func viewWillAppear(_ animated: Bool) {
@@ -123,10 +120,14 @@ extension WeatherViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! ForecastTableViewCell
         weatherService?.forecastWeather { forecastWeather in
-            cell.dateLabel.text = forecastWeather.list[0].dt_txt
-            cell.forecastTemperatureLabel.text = ("\(forecastWeather.list[0].main.temp)")
-            cell.weatherIcon.image = UIImage(named: "\(forecastWeather.list[0].weather[0].icon)")
+            cell.dateLabel.text = "\(self.forcastWeatherDataArray[indexPath.row].dt_txt)"
+            cell.forecastTemperatureLabel.text = ("\(self.forcastWeatherDataArray[indexPath.row].main.temp.rounded())")
+            cell.weatherIcon.image = UIImage(named: "\(self.forcastWeatherDataArray[indexPath.row].weather[0].icon)")
         }
         return cell
     }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
+    }
 }
+
