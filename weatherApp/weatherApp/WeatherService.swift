@@ -4,10 +4,15 @@
 //
 //  Created by Даниил Алексеев on 25.11.2020.
 //
+//
+//  WeatherService.swift
+//  weatherApp
+//
+//  Created by Даниил Алексеев on 25.11.2020.
+//
 
 import Foundation
 import Alamofire
-
 
 protocol WeatherService {
     func currentWeather(completion: @escaping (WeatherData) -> Void)
@@ -89,17 +94,10 @@ class AlamofireWeatherService: WeatherService{
             guard let forecastWeather = response.value else { return }
             self.forcastWeatherDataArray = forecastWeather.list
             DispatchQueue.main.async {
-                 completion(forecastWeather)
+                completion(forecastWeather)
+
             }
         }
     }
 }
-
-
-
-
-//    
-//}
-
-
 
