@@ -2,7 +2,7 @@ import UIKit
 import Alamofire
 
 class WeatherViewController: UIViewController {
-    // MARK: - Задаем необходимые переменные
+// MARK: - Задаем необходимые переменные
     let gradientLayer = CAGradientLayer()
     let tableView = UITableView()
     var weatherService: WeatherService?
@@ -18,6 +18,7 @@ class WeatherViewController: UIViewController {
         
         weatherService?.forecastWeather{ forecastWeather in
             self.forcastWeatherDataArray = forecastWeather.list
+            self.tableView.reloadData()
         }
     }
     // MARK: - Вызываем ViewWillAppear для создания градиента
@@ -88,7 +89,6 @@ class WeatherViewController: UIViewController {
         currentWeatherTemperatureLabel.center.x = self.view.center.x
         currentWeatherTemperatureLabel.font = UIFont(name:"DIN Condensed", size: 80.0)
         weatherService?.currentWeather { currentWeather in
-            self.tableView.reloadData()
             currentWeatherTemperatureLabel.text = "\(currentWeather.main.temp.rounded())°C"
         }
         view.addSubview(currentWeatherTemperatureLabel)
@@ -130,4 +130,5 @@ extension WeatherViewController: UITableViewDelegate, UITableViewDataSource{
         cell.backgroundColor = UIColor.clear
     }
 }
+
 
