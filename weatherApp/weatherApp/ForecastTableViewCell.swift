@@ -48,25 +48,31 @@ class ForecastTableViewCell: UITableViewCell {
     
     func setImageConstraints(){
         weatherIcon.translatesAutoresizingMaskIntoConstraints = false
-        weatherIcon.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        weatherIcon.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
-        weatherIcon.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        weatherIcon.widthAnchor.constraint(equalTo: weatherIcon.heightAnchor).isActive = true
+        NSLayoutConstraint.activate([
+        weatherIcon.centerYAnchor.constraint(equalTo: centerYAnchor),
+        weatherIcon.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+        weatherIcon.heightAnchor.constraint(equalToConstant: 40),
+        weatherIcon.widthAnchor.constraint(equalTo: weatherIcon.heightAnchor)
+        ])
     }
     
     func setDateLabeConstraintsl(){
         dateLabel.translatesAutoresizingMaskIntoConstraints = false
-        dateLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        dateLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
-        dateLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        dateLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
+        NSLayoutConstraint.activate([
+            dateLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            dateLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            dateLabel.heightAnchor.constraint(equalToConstant: 40),
+            dateLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12)
+        ])
     }
     
     func setForecastTemperatureLabel() {
         forecastTemperatureLabel.translatesAutoresizingMaskIntoConstraints = false
-        forecastTemperatureLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        forecastTemperatureLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 220).isActive = true
-        forecastTemperatureLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        forecastTemperatureLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
+        NSLayoutConstraint.activate([
+        forecastTemperatureLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+        forecastTemperatureLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 220),
+        forecastTemperatureLabel.heightAnchor.constraint(equalToConstant: 40),
+        forecastTemperatureLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12)
+        ])
     }
 }
