@@ -26,9 +26,9 @@ class RealmToDoListCompletedTaskViewController: UIViewController {
         guard let myItem = self.item else {
             return
         }
-        realm.beginWrite()
-        realm.delete(myItem)
-        try! realm.commitWrite()
+       try! realm.write {
+            realm.delete(myItem)
+        }
         deletionHandler?()
         navigationController?.popToRootViewController(animated: true)
     }
