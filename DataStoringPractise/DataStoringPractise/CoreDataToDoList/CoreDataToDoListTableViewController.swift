@@ -93,6 +93,7 @@ class CoreDataToDoListTableViewController: UITableViewController {
     
     func loadItems(){
         let request: NSFetchRequest<Items> = Items.fetchRequest()
+        request.fetchLimit = 7
 
         do{
             items = try context.fetch(request)
