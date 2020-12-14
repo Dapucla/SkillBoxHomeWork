@@ -32,7 +32,15 @@ class RealmWeatherViewController: UIViewController {
             self.currentWeatherDescriptionLabel.text = currentWeather.weather[0].description
             self.currentWeatherImageView.image = UIImage(named: "\(currentWeather.weather[0].icon)")
             self.currentWeatherTemperatureLabel.text = "\(currentWeather.main.temp.rounded())"
+            try! self.realm.write {
+                self.currentWeatherCondition.cityName = currentWeather.name
+                self.currentWeatherCondition.currentWeatherDescription = currentWeather.weather[0].description
+                self.currentWeatherCondition.currentWeatherTemp = "\(currentWeather.main.temp.rounded())"
+                self.currentWeatherCondition.currentWeatherIcon = "\(currentWeather.weather[0].icon)"
+                self.realm.add(self.currentWeatherCondition)
+           }                          
         }
+        print(currentWeatherCondition)
         weatherService.forecastWeather{ forecastWeather in
             self.forcastWeatherDataArray = forecastWeather.list
             self.tableView.reloadData()
